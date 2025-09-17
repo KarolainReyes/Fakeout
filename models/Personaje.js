@@ -88,8 +88,10 @@ class Personaje {
         throw new Error('El método atacar() debe implementarse en la subclase');
     }
 
-    recibirDaño(cantidad) {
+    recibirDanio(cantidad) {
         this.vida = this.#vida - cantidad;
     }
 
 }
+
+module.exports = Personaje;
