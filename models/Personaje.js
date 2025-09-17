@@ -1,4 +1,4 @@
-class Personaje {
+export class Personaje {
     #nombre;
     #vida;
     #ataque;
@@ -35,7 +35,6 @@ class Personaje {
             this.#precision = precision;
         }
         
-        //creo que esto deberia ser una clase
         this.inventario = []; 
     }
 
@@ -94,4 +93,3 @@ class Personaje {
 
 }
 
-module.exports = Personaje;

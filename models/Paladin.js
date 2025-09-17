@@ -1,11 +1,10 @@
 import { randomUUID } from "crypto";
 import { Personaje } from "./Personaje.js";
 
-export class Morador extends Personaje{
+export class Paladin extends Personaje{
     constructor(nombre){
-        super(nombre, 400, 15, 10, 60)
+        super(nombre, 350, 25, 20, 70)
         this.id = randomUUID();
     }
 
 }
-
