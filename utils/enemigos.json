@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "nombre": "Sanguinario",
+    "vida": 300,
+    "daño": 50,
+    "defensa": 20,
+    "precision": 60
+  },
+  {
+    "id": "2",
+    "nombre": "Necrófago salvaje",
+    "vida": 120,
+    "daño": 15,
+    "defensa": 5,
+    "precision": 50
+  },
+  {
+    "id": "3",
+    "nombre": "Asaltante",
+    "vida": 150,
+    "daño": 20,
+    "defensa": 10,
+    "precision": 65
+  },
+  {
+    "id": "4",
+    "nombre": "Supermutante",
+    "vida": 250,
+    "daño": 35,
+    "defensa": 15,
+    "precision": 55
+  },
+  {
+    "id": "5",
+    "nombre": "Centauro mutante",
+    "vida": 200,
+    "daño": 25,
+    "defensa": 8,
+    "precision": 50
+  },
+  {
+    "id": "6",
+    "nombre": "Cazador de mutarachas",
+    "vida": 80,
+    "daño": 10,
+    "defensa": 5,
+    "precision": 70
+  },
+  {
+    "id": "7",
+    "nombre": "Perro salvaje",
+    "vida": 100,
+    "daño": 12,
+    "defensa": 8,
+    "precision": 65
+  },
+  {
+    "id": "8",
+    "nombre": "Necrófago brillante",
+    "vida": 180,
+    "daño": 20,
+    "defensa": 10,
+    "precision": 55
+  },
+  {
+    "id": "9",
+    "nombre": "Artillero",
+    "vida": 160,
+    "daño": 22,
+    "defensa": 12,
+    "precision": 70
+  },
+  {
+    "id": "10",
+    "nombre": "Cazador de Mirelurks",
+    "vida": 220,
+    "daño": 28,
+    "defensa": 18,
+    "precision": 60
+  }
+]
