@@ -1,23 +1,30 @@
 import fs from "fs";
 import inquirer from "inquirer";
+import { sleep } from "../utils/sleeps.js";
 
 export class InventarioInteractivo {
   constructor(personaje, rutaArchivo = "../data/personajes.json") {
     this.personaje = personaje;
     this.rutaArchivo = rutaArchivo;
 
-    if (!this.personaje.equipado) this.personaje.equipado = { arma: null, armadura: null };
-    if (typeof this.personaje.hp !== "number") this.personaje.hp = this.personaje.vida;
+    if (!this.personaje.equipado) {
+      this.personaje.equipado = { arma: null, armadura: null };
+    }
+    if (typeof this.personaje.hp !== "number") {
+      this.personaje.hp = this.personaje.vida;
+    }
   }
 
   async abrirInventario() {
     if (!this.personaje.inventario || this.personaje.inventario.length === 0) {
       console.log("📭 Tu inventario está vacío.");
+      await sleep(1500);
       return;
     }
 
     let salir = false;
     while (!salir) {
+      console.clear(); // Limpia antes del menú
       const { itemSeleccionado } = await inquirer.prompt([
         {
           type: "list",
@@ -32,15 +39,17 @@ export class InventarioInteractivo {
 
       if (itemSeleccionado === -1) return; // Salir del inventario
 
-      this.usarItem(itemSeleccionado);
-      this.guardarPersonaje(); // Guardar después de cada acción
+      await this.usarItem(itemSeleccionado);
+      this.guardarPersonaje();
+      await sleep(1500); // Tiempo para leer el resultado antes del siguiente menú
     }
   }
 
-  usarItem(index) {
+  async usarItem(index) {
     const item = this.personaje.inventario[index];
-
     if (!item) return;
+
+    console.clear();
 
     switch (item.tipo) {
       case "Consumible":
@@ -55,7 +64,9 @@ export class InventarioInteractivo {
           this.personaje.equipado.arma = null;
           console.log(`⚔️ Desequipaste el arma: ${item.nombre}`);
         } else {
-          if (this.personaje.equipado.arma) this.personaje.ataque -= this.personaje.equipado.arma.daño;
+          if (this.personaje.equipado.arma) {
+            this.personaje.ataque -= this.personaje.equipado.arma.daño;
+          }
           this.personaje.ataque += item.daño;
           this.personaje.equipado.arma = item;
           console.log(`⚔️ Has equipado el arma: ${item.nombre} (+${item.daño} ataque)`);
@@ -68,7 +79,9 @@ export class InventarioInteractivo {
           this.personaje.equipado.armadura = null;
           console.log(`🛡️ Desequipaste la armadura: ${item.nombre}`);
         } else {
-          if (this.personaje.equipado.armadura) this.personaje.defensa -= this.personaje.equipado.armadura.defensa;
+          if (this.personaje.equipado.armadura) {
+            this.personaje.defensa -= this.personaje.equipado.armadura.defensa;
+          }
           this.personaje.defensa += item.defensa;
           this.personaje.equipado.armadura = item;
           console.log(`🛡️ Has equipado la armadura: ${item.nombre} (+${item.defensa} defensa)`);
@@ -77,7 +90,10 @@ export class InventarioInteractivo {
 
       default:
         console.log("❓ Tipo de objeto no reconocido.");
+        break;
     }
+
+    await sleep(1500); // Da tiempo para que el jugador lea el mensaje
   }
 
   guardarPersonaje() {
@@ -87,8 +103,11 @@ export class InventarioInteractivo {
     const personajes = data.trim() ? JSON.parse(data) : [];
 
     const index = personajes.findIndex(p => p.id === this.personaje.id);
-    if (index !== -1) personajes[index] = this.personaje;
-    else personajes.push(this.personaje);
+    if (index !== -1) {
+      personajes[index] = this.personaje;
+    } else {
+      personajes.push(this.personaje);
+    }
 
     fs.writeFileSync(this.rutaArchivo, JSON.stringify(personajes, null, 2), "utf-8");
   }

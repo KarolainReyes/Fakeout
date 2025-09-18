@@ -64,7 +64,7 @@
     "id": "612f1078-4f51-41cc-b91a-3dba4a0804a6",
     "nombre": "Andy",
     "vida": 450,
-    "ataque": 10,
+    "ataque": 90,
     "defensa": 25,
     "precision": 90,
     "inventario": [
@@ -94,7 +94,12 @@
       }
     ],
     "equipado": {
-      "arma": null,
+      "arma": {
+        "id": "18",
+        "nombre": "Minigun",
+        "tipo": "Arma",
+        "daño": 80
+      },
       "armadura": {
         "id": "6",
         "nombre": "Armadura de cuero",
@@ -147,5 +152,174 @@
       "armadura": null
     },
     "hp": 390
+  },
+  {
+    "id": "d6342112-000e-450b-a923-691d2d787812",
+    "nombre": "Juan",
+    "vida": 245,
+    "ataque": 105,
+    "defensa": 35,
+    "precision": 70,
+    "inventario": [
+      {
+        "id": "18",
+        "nombre": "Minigun",
+        "tipo": "Arma",
+        "daño": 80
+      },
+      {
+        "id": "6",
+        "nombre": "Armadura de cuero",
+        "tipo": "Armadura",
+        "defensa": 15
+      },
+      {
+        "id": "12",
+        "nombre": "Super Stimpak",
+        "tipo": "Consumible",
+        "curacion": 120
+      },
+      {
+        "id": "1",
+        "nombre": "Pistola 10mm",
+        "tipo": "Arma",
+        "daño": 18
+      }
+    ],
+    "equipado": {
+      "arma": {
+        "id": "18",
+        "nombre": "Minigun",
+        "tipo": "Arma",
+        "daño": 80
+      },
+      "armadura": {
+        "id": "6",
+        "nombre": "Armadura de cuero",
+        "tipo": "Armadura",
+        "defensa": 15
+      }
+    },
+    "hp": 380
+  },
+  {
+    "id": "9090c6b1-5dc8-46ec-8b9a-e830831344a7",
+    "nombre": "Camilo",
+    "vida": 235,
+    "ataque": 55,
+    "defensa": 20,
+    "precision": 70,
+    "inventario": [
+      {
+        "id": "2",
+        "nombre": "Rifle Láser",
+        "tipo": "Arma",
+        "daño": 30
+      },
+      {
+        "id": "9",
+        "nombre": "Casco de combate",
+        "tipo": "Armadura",
+        "defensa": 10
+      },
+      {
+        "id": "6",
+        "nombre": "Armadura de cuero",
+        "tipo": "Armadura",
+        "defensa": 15
+      }
+    ],
+    "equipado": {
+      "arma": {
+        "id": "2",
+        "nombre": "Rifle Láser",
+        "tipo": "Arma",
+        "daño": 30
+      },
+      "armadura": null
+    },
+    "hp": 360
+  },
+  {
+    "id": "1b74775e-414a-4738-a7a3-f572456e35ca",
+    "nombre": "Nsaa",
+    "vida": 400,
+    "ataque": 15,
+    "defensa": 10,
+    "precision": 60,
+    "inventario": [
+      {
+        "id": "2",
+        "nombre": "Rifle Láser",
+        "tipo": "Arma",
+        "daño": 30
+      },
+      {
+        "id": "9",
+        "nombre": "Casco de combate",
+        "tipo": "Armadura",
+        "defensa": 10
+      },
+      {
+        "id": "14",
+        "nombre": "Steak de Iguana",
+        "tipo": "Consumible",
+        "curacion": 25
+      }
+    ],
+    "equipado": {
+      "arma": null,
+      "armadura": null
+    }
+  },
+  {
+    "id": "38435646-46e8-45df-9f01-507163cefa5a",
+    "nombre": "Kiiki",
+    "vida": 350,
+    "ataque": 25,
+    "defensa": 20,
+    "precision": 70,
+    "inventario": [],
+    "equipado": {
+      "arma": null,
+      "armadura": null
+    }
+  },
+  {
+    "id": "19985443-404a-48e3-b38c-a59a88bcfa48",
+    "nombre": "ANDREGAI",
+    "vida": 290,
+    "ataque": 100,
+    "defensa": 15,
+    "precision": 65,
+    "inventario": [
+      {
+        "id": "18",
+        "nombre": "Minigun",
+        "tipo": "Arma",
+        "daño": 80
+      },
+      {
+        "id": "6",
+        "nombre": "Armadura de cuero",
+        "tipo": "Armadura",
+        "defensa": 15
+      }
+    ],
+    "equipado": {
+      "arma": {
+        "id": "18",
+        "nombre": "Minigun",
+        "tipo": "Arma",
+        "daño": 80
+      },
+      "armadura": {
+        "id": "6",
+        "nombre": "Armadura de cuero",
+        "tipo": "Armadura",
+        "defensa": 15
+      }
+    },
+    "hp": 520
   }
 ]

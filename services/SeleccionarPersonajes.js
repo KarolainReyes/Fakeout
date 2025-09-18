@@ -1,5 +1,7 @@
 import fs from "fs";
 import inquirer from "inquirer";
+import { sleep } from "../utils/sleeps.js";
+ 
 
 export class SeleccionPersonajes {
   static async mostrarPersonajes(rutaArchivo = "../data/personajes.json") {

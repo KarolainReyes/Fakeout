@@ -1,4 +1,6 @@
 import fs from "fs";
+import { sleep } from "../utils/sleeps.js";
+ 
 
 export class GeneradorItems {
   static generarYGuardarItem(personaje) {

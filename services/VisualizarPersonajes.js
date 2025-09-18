@@ -1,12 +1,15 @@
 
 import fs from "fs";
+import { sleep } from "../utils/sleeps.js";
+ 
 
 const rutaArchivo = "../data/personajes.json";
 
 export class VisualizarPersonajes {
-    static mostrar() {
+    static async mostrar() {
         if (!fs.existsSync(rutaArchivo)) {
             console.log("⚠️ No existe el archivo de personajes.");
+
             return;
         }
 
@@ -14,11 +17,12 @@ export class VisualizarPersonajes {
 
         if (data.trim().length === 0) {
             console.log("⚠️ No hay personajes guardados.");
+            await sleep(1000);
+            console.clear();
             return;
         }
 
         const personajes = JSON.parse(data);
-
         console.table(
             personajes.map(p => ({
                 Nombre: p.nombre,
