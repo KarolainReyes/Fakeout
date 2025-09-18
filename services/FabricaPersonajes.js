@@ -1,14 +1,13 @@
-// FabricaPersonaje.js
+
 import { Morador } from "../models/Morador.js";
 import { Necrofago } from "../models/Necrofago.js";
 import { Paladin } from "../models/Paladin.js";
 import { Synth } from "../models/Synth.js";
+import { v4 as uuidv4 } from 'uuid';
 
 import fs from "fs";
 
-const rutaArchivo = "../data/personajes.json";
-
-export class FabricaPersonaje {
+export class FabricaPersonajes {
     static crearPersonaje(tipo, nombre) {
         let personaje;
 
@@ -35,27 +34,35 @@ export class FabricaPersonaje {
     }
 
     static guardarPersonaje(personaje) {
-        let personajes = [];
+    let personajes = [];
+    const ruta = "../data/personajes.json";
 
-        if (fs.existsSync(rutaArchivo)) {
-            const data = fs.readFileSync(rutaArchivo, "utf-8");
-            if (data.trim().length > 0) {
-                personajes = JSON.parse(data);
-            }
+
+    if (fs.existsSync(ruta)) {
+        const data = fs.readFileSync(ruta, "utf-8");
+        if (data.trim().length > 0) {
+            personajes = JSON.parse(data);
         }
-
-        personajes.push({
-            id: personaje.id,
-            nombre: personaje.nombre,
-            vida: personaje.vida,
-            ataque: personaje.ataque,
-            defensa: personaje.defensa,
-            precision: personaje.precision,
-            inventario: personaje.inventario
-        });
-
-        fs.writeFileSync(rutaArchivo, JSON.stringify(personajes, null, 2), "utf-8");
     }
+    
+    personajes.push({
+        id: personaje.id,
+        nombre: personaje.nombre,
+        vida: personaje.vida,
+        ataque: personaje.ataque,
+        defensa: personaje.defensa,
+        precision: personaje.precision,
+        inventario: personaje.inventario,
+        equipado: {
+            arma: null,
+            armadura: null,
+        },
+    });
+
+    
+
+    fs.writeFileSync(ruta, JSON.stringify(personajes, null, 2), "utf-8");
+
+    
 }
-
-
+}
