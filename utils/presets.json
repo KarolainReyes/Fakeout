@@ -1,0 +1,47 @@
+[
+  {
+    "nombre": "Salvador",
+    "items": [
+      { "id": "20", "nombre": "Lanza-misiles", "tipo": "Arma", "daño": 120 },
+      { "id": "8", "nombre": "Armadura de poder T-45", "tipo": "Armadura", "defensa": 60 },
+      { "id": "11", "nombre": "Stimpak", "tipo": "Consumible", "curacion": 50 },
+      { "id": "14", "nombre": "Steak de Iguana", "tipo": "Consumible", "curacion": 25 },
+      { "id": "16", "nombre": "Sopa de verduras", "tipo": "Consumible", "curacion": 20 }
+    ]
+  },
+  {
+    "nombre": "Cazador",
+    "items": [
+      { "id": "19", "nombre": "Rifle de francotirador", "tipo": "Arma", "daño": 65 },
+      { "id": "7", "nombre": "Armadura metálica", "tipo": "Armadura", "defensa": 25 },
+      { "id": "11", "nombre": "Stimpak", "tipo": "Consumible", "curacion": 50 },
+      { "id": "15", "nombre": "Carne de mutaracha cocida", "tipo": "Consumible", "curacion": 15 }
+    ]
+  },
+  {
+    "nombre": "Artillero",
+    "items": [
+      { "id": "18", "nombre": "Minigun", "tipo": "Arma", "daño": 80 },
+      { "id": "6", "nombre": "Armadura de cuero", "tipo": "Armadura", "defensa": 15 },
+      { "id": "12", "nombre": "Super Stimpak", "tipo": "Consumible", "curacion": 120 },
+      { "id": "13", "nombre": "Stimpak de emergencia", "tipo": "Consumible", "curacion": 30 }
+    ]
+  },
+  {
+    "nombre": "Explorador",
+    "items": [
+      { "id": "2", "nombre": "Rifle Láser", "tipo": "Arma", "daño": 30 },
+      { "id": "9", "nombre": "Casco de combate", "tipo": "Armadura", "defensa": 10 },
+      { "id": "14", "nombre": "Steak de Iguana", "tipo": "Consumible", "curacion": 25 }
+    ]
+  },
+  {
+    "nombre": "Sobreviviente",
+    "items": [
+      { "id": "3", "nombre": "Escopeta de combate", "tipo": "Arma", "daño": 45 },
+      { "id": "10", "nombre": "Guantes reforzados", "tipo": "Armadura", "defensa": 5 },
+      { "id": "15", "nombre": "Carne de mutaracha cocida", "tipo": "Consumible", "curacion": 15 },
+      { "id": "16", "nombre": "Sopa de verduras", "tipo": "Consumible", "curacion": 20 }
+    ]
+  }
+]
