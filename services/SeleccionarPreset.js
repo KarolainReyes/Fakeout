@@ -1,6 +1,7 @@
 import fs from "fs";
 import inquirer from "inquirer";
 import { sleep } from "../utils/sleeps.js";
+import chalk from "chalk";
  
 
 export class AsignarPreset {
@@ -26,7 +27,7 @@ export class AsignarPreset {
       {
         type: "list",
         name: "presetNombre",
-        message: "⚙️ Selecciona un kit de inicio:",
+        message: chalk.yellow("⚙️  Selecciona un kit de inicio:"),
         choices: presets.map((p) => ({
           name: `${p.nombre} (Items: ${p.items.map(i => i.nombre).join(", ")})`,
           value: p.nombre,
@@ -36,7 +37,7 @@ export class AsignarPreset {
 
     const presetElegido = presets.find((p) => p.nombre === presetNombre);
     if (!presetElegido) {
-      console.error("❌ Preset no encontrado.");
+      console.error("❌  Preset no encontrado.");
       return;
     }
 
@@ -63,7 +64,7 @@ export class AsignarPreset {
     // Guardar de nuevo
     fs.writeFileSync(this.rutaPersonajes, JSON.stringify(personajes, null, 2), "utf-8");
 
-    console.log(`✅ Se asignó el preset "${presetElegido.nombre}" a ${personaje.nombre}`);
+    console.log(chalk.green(`✅  Se asignó el preset "${presetElegido.nombre}" a ${personaje.nombre}`));
     return personaje; // devuelve el personaje modificado
   }
 }

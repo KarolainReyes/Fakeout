@@ -6,7 +6,7 @@ export async function Menus(...opciones) {
     {
       type: 'list',
       name: 'opcion',
-      message:'Elige una opción:',
+      message:chalk.yellow (' 🎯 Elige una opción:'),
       choices: opciones
     }
   ]);

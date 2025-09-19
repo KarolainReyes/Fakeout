@@ -1,6 +1,7 @@
 import fs from "fs";
 import inquirer from "inquirer";
 import { sleep } from "../utils/sleeps.js";
+import chalk from "chalk";
  
 
 export class SeleccionPersonajes {
@@ -18,7 +19,7 @@ export class SeleccionPersonajes {
         })),
       },
     ]);
-    console.log("Personaje seleccionado correctamente");
+    console.log(chalk.green(" ✔️  Personaje seleccionado correctamente"));
     return personajes[seleccion];
   }
 }

@@ -69,7 +69,7 @@ export class InventarioInteractivo {
           }
           this.personaje.ataque += item.daño;
           this.personaje.equipado.arma = item;
-          console.log(`⚔️ Has equipado el arma: ${item.nombre} (+${item.daño} ataque)`);
+          console.log(`⚔️  Has equipado el arma: ${item.nombre} (+${item.daño} ataque)`);
         }
         break;
 
@@ -84,7 +84,7 @@ export class InventarioInteractivo {
           }
           this.personaje.defensa += item.defensa;
           this.personaje.equipado.armadura = item;
-          console.log(`🛡️ Has equipado la armadura: ${item.nombre} (+${item.defensa} defensa)`);
+          console.log(`🛡️  Has equipado la armadura: ${item.nombre} (+${item.defensa} defensa)`);
         }
         break;
 
