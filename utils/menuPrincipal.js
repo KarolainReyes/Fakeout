@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import inquirer from 'inquirer';
 
 export async function Menus(...opciones) {
@@ -5,7 +6,7 @@ export async function Menus(...opciones) {
     {
       type: 'list',
       name: 'opcion',
-      message: 'Elige una opción:',
+      message:'Elige una opción:',
       choices: opciones
     }
   ]);

@@ -8,6 +8,7 @@ import { Menus } from "../utils/menuPrincipal.js";
 import { preguntar } from "../utils/RecibirPrompt.js";
 import { enemigoAleatorio } from "../services/EnemigoAleatorio.js";
 import { sleep } from "../utils/sleeps.js";
+import chalk from 'chalk';
 
 
 class Batalla {

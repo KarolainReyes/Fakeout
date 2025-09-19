@@ -1,7 +1,7 @@
 {
   "name": "fakeout",
   "version": "1.0.0",
-  "description": "",
+  "description": "FakeOut es un videojuego rpg desarrollado en consola utilizando Node.JS junto a librerias.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/KarolainReyes/Fakeout#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
     "inquirer": "^12.9.6",
     "uuid": "^13.0.0"
   }
