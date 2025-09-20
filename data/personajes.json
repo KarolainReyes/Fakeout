@@ -1,83 +1,45 @@
 [
   {
-    "id": "23174596-455d-41dc-a33d-9792dd15ba55",
-    "nombre": "Karo",
-    "vida": 400,
-    "ataque": 15,
-    "defensa": 10,
+    "id": "6948d5f6-c18f-482d-be29-8e0ee9518b0a",
+    "nombre": "Karolain",
+    "vida": 350,
+    "ataque": 60,
+    "defensa": 15,
     "precision": 60,
     "inventario": [
       {
-        "id": "20",
-        "nombre": "Lanza-misiles",
+        "id": "3",
+        "nombre": "Escopeta de combate",
         "tipo": "Arma",
-        "daño": 120
+        "daño": 45
       },
       {
-        "id": "8",
-        "nombre": "Armadura de poder T-45",
+        "id": "10",
+        "nombre": "Guantes reforzados",
         "tipo": "Armadura",
-        "defensa": 60
+        "defensa": 5
       },
       {
-        "id": "11",
-        "nombre": "Stimpak",
-        "tipo": "Consumible",
-        "curacion": 50
-      },
-      {
-        "id": "14",
-        "nombre": "Steak de Iguana",
-        "tipo": "Consumible",
-        "curacion": 25
-      },
-      {
-        "id": "16",
-        "nombre": "Sopa de verduras",
-        "tipo": "Consumible",
-        "curacion": 20
-      }
-    ],
-    "equipado": {
-      "arma": null,
-      "armadura": null
-    }
-  },
-  {
-    "id": "cda66686-b9a7-4e0f-86f0-74fff3af5d56",
-    "nombre": "Andre",
-    "vida": 325,
-    "ataque": 135,
-    "defensa": 70,
-    "precision": 60,
-    "inventario": [
-      {
-        "id": "20",
-        "nombre": "Lanza-misiles",
-        "tipo": "Arma",
-        "daño": 120
-      },
-      {
-        "id": "8",
-        "nombre": "Armadura de poder T-45",
+        "id": "10",
+        "nombre": "Guantes reforzados",
         "tipo": "Armadura",
-        "defensa": 60
+        "defensa": 5
       }
     ],
     "equipado": {
       "arma": {
-        "id": "20",
-        "nombre": "Lanza-misiles",
+        "id": "3",
+        "nombre": "Escopeta de combate",
         "tipo": "Arma",
-        "daño": 120
+        "daño": 45
       },
       "armadura": {
-        "id": "8",
-        "nombre": "Armadura de poder T-45",
+        "id": "10",
+        "nombre": "Guantes reforzados",
         "tipo": "Armadura",
-        "defensa": 60
+        "defensa": 5
       }
     },
-    "hp": 420
+    "hp": 415
   }
 ]

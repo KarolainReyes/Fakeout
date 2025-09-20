@@ -10,7 +10,7 @@ const logo = `
 █████╗  ███████║█████╔╝ █████╗  ██║   ██║██║   ██║   ██║   
 ██╔══╝  ██╔══██║██╔═██╗ ██╔══╝  ██║   ██║██║   ██║   ██║   
 ██║     ██║  ██║██║  ██╗███████╗╚██████╔╝╚██████╔╝   ██║   
-╚═╝     ╚═╝  ╚═╝╚══════╝ ╚═════╝  ╚═════╝    ╚═╝   
+╚═╝     ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝  ╚═════╝    ╚═╝ 
 `;
 
 
@@ -41,22 +41,25 @@ function generarEstrellas(width, height) {
    const width = 70;
    const height = 20;
 
-
    for (let i = 0; i < 15; i++) {
      console.clear();
      console.log(generarEstrellas(width, height));
      await sleep(100);
    }
 
-
    console.clear();
    await escribirTexto(logo, 3); 
-
 
    await sleep(500);
    console.clear();
    console.log(chalk.yellow(logo));
+   await sleep(1000);
+
+   
+   console.clear();
+   process.stdout.write('\x1Bc');
 }
+
 
 
 async function flow() {

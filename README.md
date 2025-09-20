@@ -90,6 +90,10 @@ Fakeout/
 ````
 ---
 
+## Diagrama UML
+
+![Diagrama UML](image.png)
+
 ## 🚀 Instalación y Uso
 ### 1️⃣ Clonar el repositorio
 ````
@@ -118,7 +122,7 @@ node index.js
 ````
 ## 🎥 Video de Presentación
 
-📌 Mira el video explicativo aquí 👉 []
+📌 Mira el video explicativo aquí 👉 [https://youtu.be/ZLoCTPUtpSw?si=rgDEGzd0ibXFZ6cf]
 
 En el video se explica:
 
